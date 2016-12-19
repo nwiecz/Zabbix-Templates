@@ -1760,7 +1760,7 @@
     <triggers>
         <trigger>
             <expression>{Template SNMP Printer:hrPrinterDetectedErrorState.last(,600)}&lt;&gt;0</expression>
-            <name>Error on Printer {HOST.NAME}</name>
+            <name>Error ({ITEM.VALUE}) on Printer {HOST.NAME}</name>
             <url>http://{HOST.IP}</url>
             <status>0</status>
             <priority>2</priority>
