@@ -1,4 +1,4 @@
-Universal Printer Template Popular
+Universal Printer Template
 
 Update for Support of Zabbix 5.0!
 This template is valid for all printer manufacturers and all devices that are attached to the RFC1759 (https://tools.ietf.org/html/rfc1759.html) and RFC3805 (https://tools.ietf.org/html/rfc3805) (Printer-MIB).
