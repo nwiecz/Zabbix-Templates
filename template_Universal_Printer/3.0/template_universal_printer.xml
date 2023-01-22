@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template SNMP Printer</template>
-            <name>Template SNMP Printer</name>
+            <template>Template Printer Universal</template>
+            <name>Template Printer Universal</name>
             <description/>
             <groups>
                 <group>
@@ -518,7 +518,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template SNMP Printer:prtCoverStatus[{#SNMPVALUE}].last(,600)}&lt;&gt;4 and {Template SNMP Printer:prtCoverStatus[{#SNMPVALUE}].last(,600)}&lt;&gt;6</expression>
+                            <expression>{Template Printer Universal:prtCoverStatus[{#SNMPVALUE}].last(,600)}&lt;&gt;4 and {Template Printer Universal:prtCoverStatus[{#SNMPVALUE}].last(,600)}&lt;&gt;6</expression>
                             <name>Cover {#SNMPVALUE} on printer {HOST.NAME} is not closed</name>
                             <url/>
                             <status>0</status>
@@ -963,7 +963,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template SNMP Printer:prtInputStatus[{#SNMPVALUE}].last(,600)}&lt;&gt;0</expression>
+                            <expression>{Template Printer Universal:prtInputStatus[{#SNMPVALUE}].last(,600)}&lt;&gt;0</expression>
                             <name>Input {#SNMPVALUE} on printer {HOST.NAME} has changed</name>
                             <url/>
                             <status>1</status>
@@ -1232,7 +1232,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template SNMP Printer:prtMarkerSuppliesCapacity[{#SNMPVALUE}].last()}&lt;10</expression>
+                            <expression>{Template Printer Universal:prtMarkerSuppliesCapacity[{#SNMPVALUE}].last()}&lt;10</expression>
                             <name>{#SNMPVALUE} is low on printer {HOST.NAME}</name>
                             <url/>
                             <status>0</status>
@@ -1269,7 +1269,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template SNMP Printer</host>
+                                        <host>Template Printer Universal</host>
                                         <key>prtMarkerSuppliesLevel[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
@@ -1301,7 +1301,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template SNMP Printer</host>
+                                        <host>Template Printer Universal</host>
                                         <key>prtMarkerSuppliesLevel[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
@@ -1313,7 +1313,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>2</type>
                                     <item>
-                                        <host>Template SNMP Printer</host>
+                                        <host>Template Printer Universal</host>
                                         <key>prtMarkerSuppliesMaxCapacity[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
@@ -1704,7 +1704,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template SNMP Printer:prtOutputStatus[{#SNMPVALUE}].last(,600)}&lt;&gt;0</expression>
+                            <expression>{Template Printer Universal:prtOutputStatus[{#SNMPVALUE}].last(,600)}&lt;&gt;0</expression>
                             <name>Output {#SNMPVALUE} on printer {HOST.NAME} has changed</name>
                             <url/>
                             <status>1</status>
@@ -1747,7 +1747,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <name>Level of supplies {#SNMPVALUE} pie</name>
-                                <host>Template SNMP Printer</host>
+                                <host>Template Printer Universal</host>
                             </resource>
                             <max_columns>2</max_columns>
                             <application/>
@@ -1759,7 +1759,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template SNMP Printer:hrPrinterDetectedErrorState.last(,600)}&lt;&gt;0</expression>
+            <expression>{Template Printer Universal:hrPrinterDetectedErrorState.last(,600)}&lt;&gt;0</expression>
             <name>Error ({ITEM.VALUE}) on Printer {HOST.NAME}</name>
             <url>http://{HOST.IP}</url>
             <status>0</status>
